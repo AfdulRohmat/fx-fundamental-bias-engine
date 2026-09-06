@@ -1,0 +1,111 @@
+{
+  "schema_version": "0.2.0",
+  "namespace": "fundamental_bias_p1y",
+  "expectation_kind": "EIOPA_RFR_1Y_PROXY",
+  "panel_start": "2015-02-28",
+  "panel_end": "2022-12-31",
+  "label_support_end": "2023-06-30",
+  "evaluation_start": "2021-01-31",
+  "evaluation_end": "2022-12-31",
+  "sealed_start": "2025-01-01",
+  "snapshot_timezone": "Europe/Brussels",
+  "snapshot_local_time": "17:00:00",
+  "proxy_availability_lag_months": 1,
+  "minimum_zscore_months": 36,
+  "minimum_training_months_per_currency": 36,
+  "minimum_pooled_rows": 360,
+  "minimum_upstream_training_months_per_currency": 12,
+  "minimum_upstream_pooled_rows": 120,
+  "ridge_penalties": [0.01, 0.1, 1.0, 10.0, 100.0],
+  "bootstrap": {
+    "kind": "circular_moving_month_block",
+    "block_length_months": 3,
+    "resamples": 10000,
+    "seed": 20260906
+  },
+  "currencies": {
+    "AUD": {
+      "country": "Australia",
+      "ref_area": "AU",
+      "headline": {"series_id": "CPALTT01AUQ659N", "value_kind": "yoy_percent", "frequency": "quarterly"},
+      "underlying": {"series_id": "CPGRLE01AUQ659N", "value_kind": "yoy_percent", "frequency": "quarterly"},
+      "unemployment": {"series_id": "LRHUTTTTAUM156S", "value_kind": "percent", "frequency": "monthly"},
+      "inflation_targets": [{"effective_from": "1900-01-01", "midpoint": 2.5}]
+    },
+    "CAD": {
+      "country": "Canada",
+      "ref_area": "CA",
+      "headline": {"series_id": "CPALTT01CAM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "underlying": {"series_id": "CPGRLE01CAM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "unemployment": {"series_id": "LRHUTTTTCAM156S", "value_kind": "percent", "frequency": "monthly"},
+      "inflation_targets": [{"effective_from": "1900-01-01", "midpoint": 2.0}]
+    },
+    "CHF": {
+      "country": "Switzerland",
+      "ref_area": "CH",
+      "headline": {"series_id": "CPALTT01CHM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "underlying": {"series_id": "CPGRLE01CHM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "unemployment": {"series_id": "LRHUTTTTCHQ156S", "value_kind": "percent", "frequency": "quarterly"},
+      "inflation_targets": [{"effective_from": "1900-01-01", "midpoint": 1.0}]
+    },
+    "EUR": {
+      "country": "Euro area",
+      "ref_area": "XM",
+      "headline": {"series_id": "CP0000EZ19M086NEST", "value_kind": "index", "frequency": "monthly"},
+      "underlying": {"series_id": "00XEFDEZ19M086NEST", "value_kind": "index", "frequency": "monthly"},
+      "unemployment": {"series_id": "LRHUTTTTEZM156S", "value_kind": "percent", "frequency": "monthly"},
+      "inflation_targets": [{"effective_from": "1900-01-01", "midpoint": 2.0}]
+    },
+    "GBP": {
+      "country": "United Kingdom",
+      "ref_area": "GB",
+      "headline": {"series_id": "CPALTT01GBM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "underlying": {"series_id": "CPGRLE01GBM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "unemployment": {"series_id": "LRHUTTTTGBM156S", "value_kind": "percent", "frequency": "monthly"},
+      "inflation_targets": [{"effective_from": "1900-01-01", "midpoint": 2.0}]
+    },
+    "JPY": {
+      "country": "Japan",
+      "ref_area": "JP",
+      "headline": {"series_id": "CPALTT01JPM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "underlying": {"series_id": "CPGRLE01JPM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "unemployment": {"series_id": "LRHUTTTTJPM156S", "value_kind": "percent", "frequency": "monthly"},
+      "inflation_targets": [{"effective_from": "1900-01-01", "midpoint": 2.0}]
+    },
+    "NOK": {
+      "country": "Norway",
+      "ref_area": "NO",
+      "headline": {"series_id": "CPALTT01NOM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "underlying": {"series_id": "CPGRLE01NOM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "unemployment": {"series_id": "LRHUTTTTNOM156S", "value_kind": "percent", "frequency": "monthly"},
+      "inflation_targets": [
+        {"effective_from": "1900-01-01", "midpoint": 2.5},
+        {"effective_from": "2018-03-02", "midpoint": 2.0}
+      ]
+    },
+    "NZD": {
+      "country": "New Zealand",
+      "ref_area": "NZ",
+      "headline": {"series_id": "NZLCPIALLQINMEI", "value_kind": "index", "frequency": "quarterly"},
+      "underlying": {"series_id": "NZLCPICORQINMEI", "value_kind": "index", "frequency": "quarterly"},
+      "unemployment": {"series_id": "LRHUTTTTNZQ156S", "value_kind": "percent", "frequency": "quarterly"},
+      "inflation_targets": [{"effective_from": "1900-01-01", "midpoint": 2.0}]
+    },
+    "SEK": {
+      "country": "Sweden",
+      "ref_area": "SE",
+      "headline": {"series_id": "CPALTT01SEM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "underlying": {"series_id": "CPGRLE01SEM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "unemployment": {"series_id": "LRHUTTTTSEM156S", "value_kind": "percent", "frequency": "monthly"},
+      "inflation_targets": [{"effective_from": "1900-01-01", "midpoint": 2.0}]
+    },
+    "USD": {
+      "country": "United States",
+      "ref_area": "US",
+      "headline": {"series_id": "CPALTT01USM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "underlying": {"series_id": "CPGRLE01USM659N", "value_kind": "yoy_percent", "frequency": "monthly"},
+      "unemployment": {"series_id": "LRHUTTTTUSM156S", "value_kind": "percent", "frequency": "monthly"},
+      "inflation_targets": [{"effective_from": "1900-01-01", "midpoint": 2.0}]
+    }
+  }
+}

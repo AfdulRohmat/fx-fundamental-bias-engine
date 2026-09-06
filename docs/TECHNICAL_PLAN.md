@@ -3,6 +3,10 @@
 Status: Phase 00 baseline frozen; Phase 01 source decision pending
 PRD: `FUNDAMENTAL_BIAS_ENGINE_PRD.md` v0.1
 
+Amendment 001 registers a separate free-data proxy namespace without altering
+the original Tier A hypotheses. See
+`docs/CONTRACT_AMENDMENT_001_FREE_1Y_PROXY.md`.
+
 ## 1. Separation from the completed event study
 
 The Phase 01-11 artifacts and `DO_NOT_PROCEED` decision remain unchanged. This

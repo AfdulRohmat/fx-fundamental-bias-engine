@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import calendar
 import io
 import math
 import re
@@ -16,7 +17,8 @@ _REL_DOC_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationshi
 _REL_PACKAGE_NS = "http://schemas.openxmlformats.org/package/2006/relationships"
 _CELL_REFERENCE = re.compile(r"^([A-Z]+)([0-9]+)$")
 _CURVE_ID = re.compile(
-    r"^(?P<area>[A-Z]{2,3})_(?P<date>[0-9]{2}_[0-9]{2}_[0-9]{4})_"
+    r"^(?P<area>[A-Z]{2,3})_"
+    r"(?:(?P<date>[0-9]{1,2}_[0-9]{1,2}_[0-9]{4})_)?"
     r"(?P<instrument>[A-Z]+)(?:_|$)"
 )
 
@@ -73,7 +75,8 @@ def _workbook_payload(path: Path) -> bytes:
             members = [
                 name
                 for name in archive.namelist()
-                if name.lower().endswith("_term_structures.xlsx")
+                if "_term_structures" in name.lower()
+                and name.lower().endswith(".xlsx")
             ]
             if len(members) != 1:
                 raise EiopaRfrError(
@@ -206,7 +209,21 @@ def parse_term_structures(
         match = _CURVE_ID.match(raw_curve_id)
         if match is None:
             raise EiopaRfrError(f"Invalid EIOPA curve identifier: {raw_curve_id}")
-        reference_date = datetime.strptime(match.group("date"), "%d_%m_%Y").date()
+        raw_reference_date = match.group("date")
+        if raw_reference_date is not None:
+            reference_date = datetime.strptime(
+                raw_reference_date, "%d_%m_%Y"
+            ).date()
+        else:
+            archive_period = re.search(r"(20[0-9]{2})-([0-9]{2})", path.stem)
+            if archive_period is None:
+                raise EiopaRfrError(
+                    "Curve identifier has no date and archive is undated: "
+                    f"{raw_curve_id}"
+                )
+            year = int(archive_period.group(1))
+            month = int(archive_period.group(2))
+            reference_date = date(year, month, calendar.monthrange(year, month)[1])
         points.append(
             CurvePoint(
                 currency=currency,

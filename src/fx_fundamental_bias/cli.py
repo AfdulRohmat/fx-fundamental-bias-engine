@@ -6,7 +6,10 @@ import argparse
 from collections.abc import Sequence
 from pathlib import Path
 
+from .phase02_fetch import fetch_phase02
+from .phase02_panel import build_phase02
 from .qualification import load_catalog, summarize, write_matrix, write_summary
+from .research_config import load_research_config
 from .source_poc import build_phase01_evidence, write_json
 
 
@@ -25,6 +28,15 @@ def _parser() -> argparse.ArgumentParser:
     poc.add_argument("--bis", type=Path, required=True)
     poc.add_argument("--alfred", type=Path, action="append", required=True)
     poc.add_argument("--output", type=Path, required=True)
+
+    fetch = commands.add_parser("phase02-fetch")
+    fetch.add_argument("--config", type=Path, required=True)
+    fetch.add_argument("--raw-root", type=Path, required=True)
+
+    panel = commands.add_parser("phase02-build")
+    panel.add_argument("--config", type=Path, required=True)
+    panel.add_argument("--raw-root", type=Path, required=True)
+    panel.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -46,5 +58,21 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
         write_json(arguments.output, result)
         print(f"phase_decision={result['phase_decision']}")
+        return 0
+    if arguments.command == "phase02-fetch":
+        config = load_research_config(arguments.config)
+        result = fetch_phase02(config, arguments.raw_root)
+        print(
+            f"alfred_files={result['alfred_file_count']} "
+            f"eiopa_files={result['eiopa_file_count']}"
+        )
+        return 0
+    if arguments.command == "phase02-build":
+        config = load_research_config(arguments.config)
+        result = build_phase02(config, arguments.raw_root, arguments.output)
+        print(
+            f"status={result['status']} rows={result['row_count']} "
+            f"complete={result['complete_row_count']}"
+        )
         return 0
     raise AssertionError(f"Unhandled command: {arguments.command}")
