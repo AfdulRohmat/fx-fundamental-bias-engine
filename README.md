@@ -11,11 +11,12 @@ not reinterpret that result.
 
 ## Current status
 
-Phase 00 is complete. Phase 01 source POCs are complete with
-`REVIEW_REQUIRED`: the free-source stack is adequate for FX marks, policy-rate
-history, and much of the macro-vintage mechanism, but the registered six-month
-market-expectation input is not qualified across all G10 currencies. No edge,
-strategy, or profitability result exists yet, and 2025 onward remains sealed.
+Phase 00 and Phase 01 are complete. Amendment 001 created a separate,
+explicitly weaker EIOPA one-year RFR proxy namespace; it does not replace the
+original untested Tier A six-month expectation claim. Phase 02 built the real
+point-in-time G10 panel and is `REVIEW_REQUIRED`: 232/240 evaluation rows are
+complete, with eight retired-series gaps failed closed. No edge, strategy, or
+profitability result exists yet, and 2025 onward remains sealed.
 
 ## Research architecture
 
@@ -45,7 +46,7 @@ retained only as frozen benchmarks.
 |---|---|---|
 | 00 | PRD, video review, literature backbone, technical contract | Complete |
 | 01 | free G10 data-source qualification | POC complete - `REVIEW_REQUIRED` |
-| 02 | canonical point-in-time macro/policy/expectations/FX panel | Awaiting source-contract decision |
+| 02 | canonical point-in-time macro/policy/proxy panel | Complete - `REVIEW_REQUIRED` (232/240 evaluation rows) |
 | 03 | structural reaction and expected-repricing models | Gated by Phase 02 |
 | 04 | G10 currency and pair-divergence research | Gated by Phase 03 |
 | 05 | aggregate Fundamental Bias research gate | Gated by Phase 04 |
@@ -60,6 +61,7 @@ retained only as frozen benchmarks.
 - [Video-method review](docs/VIDEO_METHOD_REVIEW.md)
 - [Phase 00 design result](docs/PHASE_00_RESEARCH_DESIGN.md)
 - [Phase 01 readable source result](docs/PHASE_01_SOURCE_QUALIFICATION.md)
+- [Phase 02 canonical-panel result](docs/PHASE_02_CANONICAL_PANEL.md)
 - [Machine-readable Phase 01 POC evidence](evidence/phase01/poc_evidence.json)
 - [Complete 70-row source matrix](evidence/phase01/source_matrix.csv)
 

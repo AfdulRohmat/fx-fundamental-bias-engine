@@ -1,0 +1,28 @@
+{
+  "complete_months_by_currency": {
+    "AUD": 77,
+    "CAD": 77,
+    "CHF": 53,
+    "EUR": 53,
+    "GBP": 77,
+    "JPY": 67,
+    "NOK": 73,
+    "NZD": 77,
+    "SEK": 77,
+    "USD": 77
+  },
+  "complete_row_count": 708,
+  "evaluation_complete_row_count": 232,
+  "evaluation_row_count": 240,
+  "phase": "02-canonical-panel",
+  "point_in_time_macro": true,
+  "proxy_availability_lag_months": 1,
+  "rfr_instruments": {
+    "GVT": 28,
+    "OIS": 14,
+    "SWP": 728
+  },
+  "row_count": 950,
+  "sealed_data_accessed": false,
+  "status": "REVIEW_REQUIRED"
+}
