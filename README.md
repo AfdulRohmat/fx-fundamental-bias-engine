@@ -1,0 +1,82 @@
+﻿# FX Fundamental Bias Engine
+
+A separate, pair-agnostic G10 research project for testing whether relative
+inflation, labour conditions, and policy-expectation repricing provide a useful
+medium-horizon FX directional bias.
+
+The project is intentionally separate from
+`fx-fundamental-analysis`, whose registered USDJPY employment-event program
+ended with `DO_NOT_PROCEED`. This repository asks a different question and does
+not reinterpret that result.
+
+## Current status
+
+Phase 00 is in progress. The PRD and technical contract are being frozen before
+source qualification or model fitting. No edge, strategy, or profitability
+result exists yet, and 2025 onward remains sealed.
+
+## Research architecture
+
+```text
+point-in-time inflation and labour state
+    -> model-implied central-bank policy path
+    -> compare with the path already priced by markets
+    -> expected policy-path repricing
+    -> base-minus-quote currency divergence
+    -> non-overlapping medium-horizon FX research
+    -> technical timing only after a successful research gate
+```
+
+## Why there is no `+1/+2` score
+
+The continuous output is measured in expected basis points. Structural macro
+weights are learned against central-bank policy outcomes; repricing weights are
+learned against policy-expectation changes. Neither layer sees FX returns while
+its weights are selected.
+
+Transparent no-weight dominance, equal-weight, and fixed Taylor-style rules are
+retained only as frozen benchmarks.
+
+## Planned phases
+
+| Phase | Scope | Status |
+|---|---|---|
+| 00 | PRD, video review, literature backbone, technical contract | In progress |
+| 01 | free G10 data-source qualification | Planned |
+| 02 | canonical point-in-time macro/policy/expectations/FX panel | Gated by Phase 01 |
+| 03 | structural reaction and expected-repricing models | Gated by Phase 02 |
+| 04 | G10 currency and pair-divergence research | Gated by Phase 03 |
+| 05 | aggregate Fundamental Bias research gate | Gated by Phase 04 |
+| 06+ | technical timing and execution research | Only after Phase 05 proceeds |
+
+## Documentation
+
+- [Product requirements](FUNDAMENTAL_BIAS_ENGINE_PRD.md)
+- [Technical plan and frozen contract](docs/TECHNICAL_PLAN.md)
+- [Free-data source plan](docs/DATA_SOURCE_PLAN.md)
+- [Research backbone](docs/RESEARCH_BACKBONE.md)
+- [Video-method review](docs/VIDEO_METHOD_REVIEW.md)
+- [Phase 00 design result](docs/PHASE_00_RESEARCH_DESIGN.md)
+
+## Research safeguards
+
+- point-in-time values and availability timestamps only;
+- revisions remain separate vintages;
+- one non-overlapping primary monthly research clock;
+- explicit separation of actual action, expected action, and future path;
+- no substitution of government yields for OIS without a visible proxy label;
+- no FX-return-driven fitting of macro or repricing weights;
+- no LLM-generated historical facts or primary policy labels;
+- no strategy/PnL claim before the final research gate;
+- 2025 onward remains sealed.
+
+## Branch workflow
+
+`main` is the stable baseline. Each implementation phase uses:
+
+```text
+phase/<number>-<short-description>
+```
+
+Phase branches must update their contract/result document and pass all
+network-free checks before merge.

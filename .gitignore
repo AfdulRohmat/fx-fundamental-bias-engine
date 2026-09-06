@@ -1,0 +1,24 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+
+# Local research data and generated artifacts
+data/
+artifacts/
+reports/generated/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+config/local*.yaml
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
