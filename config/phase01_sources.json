@@ -1,0 +1,166 @@
+{
+  "feature_sources": {
+    "headline_inflation": {
+      "defaults": {
+        "provider": "ALFRED hosting OECD or Eurostat",
+        "frequency": "monthly",
+        "coverage_start": "pending_full_series_audit",
+        "coverage_end": "open",
+        "publication_time_status": "vintage_date_verified_exact_release_time_pending",
+        "vintage_status": "common_two_vintage_request_passed",
+        "expectation_kind": "not_applicable",
+        "license_status": "free_access_redistribution_review_pending",
+        "missing_rate": "pending_backfill",
+        "decision": "REVIEW_REQUIRED",
+        "limitation": "Candidate identity is verified but full point-in-time coverage is not yet audited."
+      },
+      "currencies": {
+        "AUD": {"series_id": "CPALTT01AUQ659N", "frequency": "quarterly", "limitation": "Quarterly OECD headline CPI cannot provide a new monthly observation."},
+        "CAD": {"series_id": "CPALTT01CAM659N"},
+        "CHF": {"series_id": "CPALTT01CHM659N"},
+        "EUR": {"series_id": "CPHPTT01EZM659N", "coverage_end": "last_selectable_vintage_2023-03-09", "vintage_status": "common_two_vintage_request_returned_html", "limitation": "Common ALFRED request failed; HICP definition and euro-area composition also require alignment."},
+        "GBP": {"series_id": "CPALTT01GBM659N"},
+        "JPY": {"series_id": "CPALTT01JPM659N", "coverage_end": "last_selectable_vintage_2024-05-15", "vintage_status": "common_two_vintage_request_returned_html", "limitation": "Common ALFRED request failed and requires a national-source fallback."},
+        "NOK": {"series_id": "CPALTT01NOM659N"},
+        "NZD": {"series_id": "CPALTT01NZQ659N", "frequency": "quarterly", "coverage_end": "last_selectable_vintage_2023-11-10", "vintage_status": "common_two_vintage_request_returned_html", "limitation": "Common ALFRED request failed; quarterly CPI also cannot provide a new monthly observation."},
+        "SEK": {"series_id": "CPALTT01SEM659N"},
+        "USD": {"series_id": "CPALTT01USM659N", "limitation": "CPI is not the Federal Reserve PCE target measure; profile mapping is required."}
+      }
+    },
+    "underlying_inflation": {
+      "defaults": {
+        "provider": "ALFRED hosting OECD or Eurostat",
+        "frequency": "monthly",
+        "coverage_start": "pending_full_series_audit",
+        "coverage_end": "open",
+        "publication_time_status": "vintage_date_verified_exact_release_time_pending",
+        "vintage_status": "common_two_vintage_request_passed",
+        "expectation_kind": "not_applicable",
+        "license_status": "free_access_redistribution_review_pending",
+        "missing_rate": "pending_backfill",
+        "decision": "REVIEW_REQUIRED",
+        "limitation": "Generic core CPI is only a candidate until bank-specific measure profiles are frozen."
+      },
+      "currencies": {
+        "AUD": {"series_id": "CPGRLE01AUQ659N", "frequency": "quarterly", "limitation": "Quarterly generic core CPI; RBA trimmed-mean mapping remains unresolved."},
+        "CAD": {"series_id": "CPGRLE01CAM659N", "limitation": "Must be tested against Bank of Canada preferred core measures."},
+        "CHF": {"series_id": "CPGRLE01CHM659N"},
+        "EUR": {"series_id": "00XEFDEZ19M086NEST", "limitation": "Eurostat all-items excluding food and energy uses fixed EA19 composition and differs from OECD rows."},
+        "GBP": {"series_id": "CPGRLE01GBM659N"},
+        "JPY": {"series_id": "CPGRLE01JPM659N", "coverage_end": "last_selectable_vintage_2024-05-15", "vintage_status": "common_two_vintage_request_returned_html", "limitation": "Common ALFRED request failed; measure must also be reconciled to CPI excluding fresh food."},
+        "NOK": {"series_id": "CPGRLE01NOM659N", "limitation": "Must be tested against CPI-ATE or the effective Norges Bank measure."},
+        "NZD": {"series_id": "CPGRLE01NZQ659N", "frequency": "quarterly", "limitation": "Quarterly generic core CPI; RBNZ sectoral-factor mapping remains unresolved."},
+        "SEK": {"series_id": "CPGRLE01SEM659N", "limitation": "Must be tested against CPIF excluding energy and Riksbank practice."},
+        "USD": {"series_id": "CPGRLE01USM659N", "limitation": "Generic core CPI is not core PCE; Federal Reserve mapping remains unresolved."}
+      }
+    },
+    "unemployment": {
+      "defaults": {
+        "provider": "ALFRED hosting OECD",
+        "frequency": "monthly",
+        "coverage_start": "pending_full_series_audit",
+        "coverage_end": "open",
+        "publication_time_status": "vintage_date_verified_exact_release_time_pending",
+        "vintage_status": "common_two_vintage_request_passed",
+        "expectation_kind": "not_applicable",
+        "license_status": "free_access_redistribution_review_pending",
+        "missing_rate": "pending_backfill",
+        "decision": "REVIEW_REQUIRED",
+        "limitation": "Harmonised unemployment is a candidate; release calendars and revisions remain to be audited."
+      },
+      "currencies": {
+        "AUD": {"series_id": "LRHUTTTTAUM156S"},
+        "CAD": {"series_id": "LRHUTTTTCAM156S"},
+        "CHF": {"series_id": "LMUNRRTTCHM156S", "coverage_end": "last_selectable_vintage_2025-11-17", "vintage_status": "common_two_vintage_request_returned_html", "limitation": "Common ALFRED request failed; monthly registered unemployment also differs from quarterly harmonised unemployment."},
+        "EUR": {"series_id": "LRHUTTTTEZM156S", "coverage_end": "last_selectable_vintage_2023-03-09", "vintage_status": "common_two_vintage_request_returned_html", "limitation": "Common ALFRED request failed and requires an official Eurostat fallback."},
+        "GBP": {"series_id": "LRHUTTTTGBM156S"},
+        "JPY": {"series_id": "LRHUTTTTJPM156S"},
+        "NOK": {"series_id": "LRHUTTTTNOM156S"},
+        "NZD": {"series_id": "LRHUTTTTNZQ156S", "frequency": "quarterly", "limitation": "Quarterly series is stale between releases."},
+        "SEK": {"series_id": "LRHUTTTTSEM156S"},
+        "USD": {"series_id": "LRHUTTTTUSM156S"}
+      }
+    },
+    "policy_rate": {
+      "defaults": {
+        "provider": "BIS WS_CBPOL 1.0",
+        "series_id": "WS_CBPOL.D.{REF_AREA}",
+        "frequency": "daily",
+        "coverage_start": "long_history_provider_specific",
+        "coverage_end": "open",
+        "publication_time_status": "effective_date_verified_announcement_time_pending",
+        "vintage_status": "non_revisable_with_corrections_possible",
+        "expectation_kind": "not_applicable",
+        "license_status": "free_access_terms_reviewed_for_research_snapshots",
+        "missing_rate": "sample_pass_full_backfill_pending",
+        "decision": "REVIEW_REQUIRED",
+        "limitation": "BIS scalar history passes; exact bank announcement times and corridor mappings need effective-dated profiles."
+      },
+      "currencies": {
+        "AUD": {}, "CAD": {}, "CHF": {}, "EUR": {}, "GBP": {},
+        "JPY": {}, "NOK": {}, "NZD": {}, "SEK": {}, "USD": {}
+      }
+    },
+    "policy_expectation_6m": {
+      "defaults": {
+        "provider": "NONE_QUALIFIED",
+        "series_id": "none",
+        "frequency": "monthly_snapshot",
+        "coverage_start": "not_available",
+        "coverage_end": "not_available",
+        "publication_time_status": "not_available",
+        "vintage_status": "not_applicable",
+        "expectation_kind": "tier_a_ois_or_short_rate_futures_required",
+        "license_status": "not_available",
+        "missing_rate": "1.0",
+        "decision": "FAIL",
+        "limitation": "No free point-in-time six-month policy-expectation history has qualified across all G10 currencies."
+      },
+      "currencies": {
+        "AUD": {}, "CAD": {}, "CHF": {}, "EUR": {}, "GBP": {},
+        "JPY": {}, "NOK": {}, "NZD": {}, "SEK": {}, "USD": {}
+      }
+    },
+    "central_bank_profile": {
+      "defaults": {
+        "provider": "official central-bank documents",
+        "series_id": "manual_effective_dated_profile",
+        "frequency": "event_driven",
+        "coverage_start": "pending_manual_audit",
+        "coverage_end": "open",
+        "publication_time_status": "pending_manual_audit",
+        "vintage_status": "versioned_document_required",
+        "expectation_kind": "not_applicable",
+        "license_status": "public_documents_citation_only",
+        "missing_rate": "pending",
+        "decision": "REVIEW_REQUIRED",
+        "limitation": "Target, mandate, indicator choice, and historical changes require official citations."
+      },
+      "currencies": {
+        "AUD": {}, "CAD": {}, "CHF": {}, "EUR": {}, "GBP": {},
+        "JPY": {}, "NOK": {}, "NZD": {}, "SEK": {}, "USD": {}
+      }
+    },
+    "fx_reference": {
+      "defaults": {
+        "provider": "ECB EXR reference rates",
+        "series_id": "EXR.D.{CURRENCY}.EUR.SP00.A",
+        "frequency": "business_daily",
+        "coverage_start": "1999-01-04_or_currency_specific",
+        "coverage_end": "open",
+        "publication_time_status": "verified_conservative_16_00_CET",
+        "vintage_status": "non_revisable_with_corrections_possible",
+        "expectation_kind": "not_applicable",
+        "license_status": "free_access_research_use",
+        "missing_rate": "sample_0_on_common_business_dates",
+        "decision": "PASS",
+        "limitation": "Indicative reference marks are not executable bid or ask quotes."
+      },
+      "currencies": {
+        "AUD": {}, "CAD": {}, "CHF": {},
+        "EUR": {"series_id": "identity_EUR_per_EUR", "limitation": "Identity leg used only for deterministic cross algebra."},
+        "GBP": {}, "JPY": {}, "NOK": {}, "NZD": {}, "SEK": {}, "USD": {}
+      }
+    }
+  }
+}

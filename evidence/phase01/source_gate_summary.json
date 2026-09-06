@@ -1,0 +1,254 @@
+{
+  "all_required_rows_pass": false,
+  "currency_count": 10,
+  "decision_counts": {
+    "FAIL": 10,
+    "PASS": 10,
+    "REVIEW_REQUIRED": 50
+  },
+  "feature_count": 7,
+  "non_pass_rows": [
+    {
+      "currency": "AUD",
+      "feature": "central_bank_profile"
+    },
+    {
+      "currency": "AUD",
+      "feature": "headline_inflation"
+    },
+    {
+      "currency": "AUD",
+      "feature": "policy_expectation_6m"
+    },
+    {
+      "currency": "AUD",
+      "feature": "policy_rate"
+    },
+    {
+      "currency": "AUD",
+      "feature": "underlying_inflation"
+    },
+    {
+      "currency": "AUD",
+      "feature": "unemployment"
+    },
+    {
+      "currency": "CAD",
+      "feature": "central_bank_profile"
+    },
+    {
+      "currency": "CAD",
+      "feature": "headline_inflation"
+    },
+    {
+      "currency": "CAD",
+      "feature": "policy_expectation_6m"
+    },
+    {
+      "currency": "CAD",
+      "feature": "policy_rate"
+    },
+    {
+      "currency": "CAD",
+      "feature": "underlying_inflation"
+    },
+    {
+      "currency": "CAD",
+      "feature": "unemployment"
+    },
+    {
+      "currency": "CHF",
+      "feature": "central_bank_profile"
+    },
+    {
+      "currency": "CHF",
+      "feature": "headline_inflation"
+    },
+    {
+      "currency": "CHF",
+      "feature": "policy_expectation_6m"
+    },
+    {
+      "currency": "CHF",
+      "feature": "policy_rate"
+    },
+    {
+      "currency": "CHF",
+      "feature": "underlying_inflation"
+    },
+    {
+      "currency": "CHF",
+      "feature": "unemployment"
+    },
+    {
+      "currency": "EUR",
+      "feature": "central_bank_profile"
+    },
+    {
+      "currency": "EUR",
+      "feature": "headline_inflation"
+    },
+    {
+      "currency": "EUR",
+      "feature": "policy_expectation_6m"
+    },
+    {
+      "currency": "EUR",
+      "feature": "policy_rate"
+    },
+    {
+      "currency": "EUR",
+      "feature": "underlying_inflation"
+    },
+    {
+      "currency": "EUR",
+      "feature": "unemployment"
+    },
+    {
+      "currency": "GBP",
+      "feature": "central_bank_profile"
+    },
+    {
+      "currency": "GBP",
+      "feature": "headline_inflation"
+    },
+    {
+      "currency": "GBP",
+      "feature": "policy_expectation_6m"
+    },
+    {
+      "currency": "GBP",
+      "feature": "policy_rate"
+    },
+    {
+      "currency": "GBP",
+      "feature": "underlying_inflation"
+    },
+    {
+      "currency": "GBP",
+      "feature": "unemployment"
+    },
+    {
+      "currency": "JPY",
+      "feature": "central_bank_profile"
+    },
+    {
+      "currency": "JPY",
+      "feature": "headline_inflation"
+    },
+    {
+      "currency": "JPY",
+      "feature": "policy_expectation_6m"
+    },
+    {
+      "currency": "JPY",
+      "feature": "policy_rate"
+    },
+    {
+      "currency": "JPY",
+      "feature": "underlying_inflation"
+    },
+    {
+      "currency": "JPY",
+      "feature": "unemployment"
+    },
+    {
+      "currency": "NOK",
+      "feature": "central_bank_profile"
+    },
+    {
+      "currency": "NOK",
+      "feature": "headline_inflation"
+    },
+    {
+      "currency": "NOK",
+      "feature": "policy_expectation_6m"
+    },
+    {
+      "currency": "NOK",
+      "feature": "policy_rate"
+    },
+    {
+      "currency": "NOK",
+      "feature": "underlying_inflation"
+    },
+    {
+      "currency": "NOK",
+      "feature": "unemployment"
+    },
+    {
+      "currency": "NZD",
+      "feature": "central_bank_profile"
+    },
+    {
+      "currency": "NZD",
+      "feature": "headline_inflation"
+    },
+    {
+      "currency": "NZD",
+      "feature": "policy_expectation_6m"
+    },
+    {
+      "currency": "NZD",
+      "feature": "policy_rate"
+    },
+    {
+      "currency": "NZD",
+      "feature": "underlying_inflation"
+    },
+    {
+      "currency": "NZD",
+      "feature": "unemployment"
+    },
+    {
+      "currency": "SEK",
+      "feature": "central_bank_profile"
+    },
+    {
+      "currency": "SEK",
+      "feature": "headline_inflation"
+    },
+    {
+      "currency": "SEK",
+      "feature": "policy_expectation_6m"
+    },
+    {
+      "currency": "SEK",
+      "feature": "policy_rate"
+    },
+    {
+      "currency": "SEK",
+      "feature": "underlying_inflation"
+    },
+    {
+      "currency": "SEK",
+      "feature": "unemployment"
+    },
+    {
+      "currency": "USD",
+      "feature": "central_bank_profile"
+    },
+    {
+      "currency": "USD",
+      "feature": "headline_inflation"
+    },
+    {
+      "currency": "USD",
+      "feature": "policy_expectation_6m"
+    },
+    {
+      "currency": "USD",
+      "feature": "policy_rate"
+    },
+    {
+      "currency": "USD",
+      "feature": "underlying_inflation"
+    },
+    {
+      "currency": "USD",
+      "feature": "unemployment"
+    }
+  ],
+  "phase_decision": "REVIEW_REQUIRED",
+  "row_count": 70
+}

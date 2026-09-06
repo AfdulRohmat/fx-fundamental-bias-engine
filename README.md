@@ -11,9 +11,11 @@ not reinterpret that result.
 
 ## Current status
 
-Phase 00 is in progress. The PRD and technical contract are being frozen before
-source qualification or model fitting. No edge, strategy, or profitability
-result exists yet, and 2025 onward remains sealed.
+Phase 00 is complete. Phase 01 source POCs are complete with
+`REVIEW_REQUIRED`: the free-source stack is adequate for FX marks, policy-rate
+history, and much of the macro-vintage mechanism, but the registered six-month
+market-expectation input is not qualified across all G10 currencies. No edge,
+strategy, or profitability result exists yet, and 2025 onward remains sealed.
 
 ## Research architecture
 
@@ -41,9 +43,9 @@ retained only as frozen benchmarks.
 
 | Phase | Scope | Status |
 |---|---|---|
-| 00 | PRD, video review, literature backbone, technical contract | In progress |
-| 01 | free G10 data-source qualification | Planned |
-| 02 | canonical point-in-time macro/policy/expectations/FX panel | Gated by Phase 01 |
+| 00 | PRD, video review, literature backbone, technical contract | Complete |
+| 01 | free G10 data-source qualification | POC complete - `REVIEW_REQUIRED` |
+| 02 | canonical point-in-time macro/policy/expectations/FX panel | Awaiting source-contract decision |
 | 03 | structural reaction and expected-repricing models | Gated by Phase 02 |
 | 04 | G10 currency and pair-divergence research | Gated by Phase 03 |
 | 05 | aggregate Fundamental Bias research gate | Gated by Phase 04 |
@@ -57,6 +59,26 @@ retained only as frozen benchmarks.
 - [Research backbone](docs/RESEARCH_BACKBONE.md)
 - [Video-method review](docs/VIDEO_METHOD_REVIEW.md)
 - [Phase 00 design result](docs/PHASE_00_RESEARCH_DESIGN.md)
+- [Phase 01 readable source result](docs/PHASE_01_SOURCE_QUALIFICATION.md)
+- [Machine-readable Phase 01 POC evidence](evidence/phase01/poc_evidence.json)
+- [Complete 70-row source matrix](evidence/phase01/source_matrix.csv)
+
+## Reproduce Phase 01 without network access
+
+After placing the immutable provider payloads under the ignored `data/` tree:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m pytest -q
+.\.venv\Scripts\ruff.exe check .
+.\.venv\Scripts\mypy.exe src
+```
+
+The parsers fail closed on missing G10 curves, malformed vintage columns,
+non-finite values, unexpected FX orientation, duplicate rows, and incomplete
+source matrices. Raw provider files remain untracked; committed evidence stores
+their SHA-256 hashes and derived audit facts.
 
 ## Research safeguards
 

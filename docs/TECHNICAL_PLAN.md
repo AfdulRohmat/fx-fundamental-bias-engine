@@ -1,6 +1,6 @@
 ﻿# Technical Plan and Contract - Phase 00 through Phase 05
 
-Status: frozen design candidate; becomes immutable when Phase 00 is accepted
+Status: Phase 00 baseline frozen; Phase 01 source decision pending
 PRD: `FUNDAMENTAL_BIAS_ENGINE_PRD.md` v0.1
 
 ## 1. Separation from the completed event study
@@ -162,8 +162,16 @@ the indicator is revised. They may be retained as a labelled sensitivity.
 
 ## 5. Snapshot contract
 
-Phase 01 freezes the exact month-end and Friday timestamps, timezone, and
-holiday fallback before Phase 02 builds any state.
+The primary snapshot is 17:00 `Europe/Brussels` on the final day in each month
+for which the ECB publishes all required G10 reference-rate legs. This is a
+conservative post-publication clock. The secondary weekly snapshot uses the
+same local time on Friday, falling back only to the newest earlier observation
+already published; it never reaches forward to Monday. Canonical storage uses
+the corresponding timezone-aware UTC timestamp.
+
+An observation labelled for month `m` but published after that snapshot is not
+available in `m`. This applies to EIOPA curves and macro releases as well as FX
+marks. There is no month-end-date imputation of publication time.
 
 At snapshot `t`, the selector chooses the newest eligible vintage satisfying:
 
@@ -175,6 +183,11 @@ reference_period <= t
 
 No backfill, interpolation, or nearest-future observation is allowed. Missing
 features make the corresponding country state incomplete.
+
+The final common sample start remains unresolved because Phase 01 did not
+qualify the registered six-month expectation source. The previously registered
+2019 evaluation start cannot be moved until a versioned amendment explains the
+source-driven reason without inspecting FX outcomes.
 
 ## 6. Feature definitions
 
@@ -351,8 +364,10 @@ silently choosing a winner.
 
 ## 11. Phase 04 FX hypotheses
 
-All intervals use date-level moving-block bootstrap or an equivalently frozen
-dependence-aware method selected in Phase 01 before outcomes are inspected.
+All intervals use a circular moving-block bootstrap over calendar-month date
+clusters with block length 3, 10,000 resamples, and random seed `20260906`.
+Currency or pair rows sharing a month stay in the same resampled cluster. These
+parameters were frozen in Phase 01 before any registered FX outcome was read.
 
 ### `FB_H3_PAIR_DIRECTION`
 

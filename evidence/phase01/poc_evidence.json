@@ -1,0 +1,704 @@
+{
+  "outcome_data_read": false,
+  "phase": "01-source-qualification",
+  "phase_decision": "REVIEW_REQUIRED",
+  "pocs": {
+    "alfred_macro_vintage": {
+      "limitation": "Vintage-date columns are available, but exact intraday release times and bank-specific indicator suitability still need profiles.",
+      "series": [
+        {
+          "changed_cell_count": 59,
+          "comparable_cell_count": 59,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-11-01",
+          "observation_count": 131,
+          "retrieved_at_utc": "2026-09-06T06:36:16.689955Z",
+          "series_id": "00XEFDEZ19M086NEST",
+          "source_sha256": "6bc092e3c8e4d8dbaeb90954aba53115566053cfebf21a4d97058552d4807726",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=00XEFDEZ19M086NEST",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 19,
+          "comparable_cell_count": 19,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-07-01",
+          "observation_count": 43,
+          "retrieved_at_utc": "2026-09-06T06:35:27.436170Z",
+          "series_id": "CPALTT01AUQ659N",
+          "source_sha256": "19ad8eea0e5cfda24eee983ab08c0099d160bd9fedce5d462a800e784a0a6e5e",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPALTT01AUQ659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 48,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-10-01",
+          "observation_count": 130,
+          "retrieved_at_utc": "2026-09-06T06:35:28.016403Z",
+          "series_id": "CPALTT01CAM659N",
+          "source_sha256": "6b958eb7c0adf5ddb1883deb9d08beffca81ca918886a7f2191eb60c405779dd",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPALTT01CAM659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 59,
+          "comparable_cell_count": 59,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-11-01",
+          "observation_count": 131,
+          "retrieved_at_utc": "2026-09-06T06:35:28.527658Z",
+          "series_id": "CPALTT01CHM659N",
+          "source_sha256": "c45b8b7a0dd21e4309bbae09b79e82a4daa1be7876069e06370424da1f2d2b35",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPALTT01CHM659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 0,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-10-01",
+          "observation_count": 130,
+          "retrieved_at_utc": "2026-09-06T06:35:29.069980Z",
+          "series_id": "CPALTT01GBM659N",
+          "source_sha256": "3ee4335349a3c0ff4a4f15aa9112f8382e6b35a52764733a624092cd992c795f",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPALTT01GBM659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "content_type": "text/html",
+          "last_selectable_vintage": "2024-05-15",
+          "reason": "ALFRED payload is not a valid ZIP",
+          "retrieved_at_utc": "2026-09-06T06:41:05.833381Z",
+          "series_id": "CPALTT01JPM659N",
+          "source_sha256": "9303aa95cc3439a3045560910a3515f7ed06f23227f09cfc1fd2fc53d4de4373",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPALTT01JPM659N",
+          "status": "FAIL_REQUEST_RETURNED_HTML"
+        },
+        {
+          "changed_cell_count": 51,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-11-01",
+          "observation_count": 131,
+          "retrieved_at_utc": "2026-09-06T06:35:30.295113Z",
+          "series_id": "CPALTT01NOM659N",
+          "source_sha256": "98ba088627745b7680b19390a137a78e962d811973f5ecb6d9ad1830ea659cb1",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPALTT01NOM659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "content_type": "text/html",
+          "last_selectable_vintage": "2023-11-10",
+          "reason": "ALFRED payload is not a valid ZIP",
+          "retrieved_at_utc": "2026-09-06T06:40:32.169353Z",
+          "series_id": "CPALTT01NZQ659N",
+          "source_sha256": "6a8617762c827def86419ee1b77e3475bd16dc9b3cf7882426aee473220f1466",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPALTT01NZQ659N",
+          "status": "FAIL_REQUEST_RETURNED_HTML"
+        },
+        {
+          "changed_cell_count": 27,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-11-01",
+          "observation_count": 131,
+          "retrieved_at_utc": "2026-09-06T06:35:31.286254Z",
+          "series_id": "CPALTT01SEM659N",
+          "source_sha256": "42f7a9dbfb38ebdce166d51cbf7f194c81c988e0f03f3d1fb76a1e4e8c502376",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPALTT01SEM659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 44,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-11-01",
+          "observation_count": 131,
+          "retrieved_at_utc": "2026-09-06T06:35:31.744189Z",
+          "series_id": "CPALTT01USM659N",
+          "source_sha256": "ce81f7b3836e5af3e02fc81e732a05229f003b626e6f69eac9706bd918d7d82b",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPALTT01USM659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 19,
+          "comparable_cell_count": 19,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-07-01",
+          "observation_count": 43,
+          "retrieved_at_utc": "2026-09-06T06:35:32.208735Z",
+          "series_id": "CPGRLE01AUQ659N",
+          "source_sha256": "7814358490c71450e8113ec8810c30fde6208d801ca76db9a6de00c09f7e27f3",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPGRLE01AUQ659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 55,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-10-01",
+          "observation_count": 130,
+          "retrieved_at_utc": "2026-09-06T06:35:32.733919Z",
+          "series_id": "CPGRLE01CAM659N",
+          "source_sha256": "cb47125c9f53d2efd82357166cef15ae5b8c7fff7d564b7a84e4a1dfd9ac1a13",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPGRLE01CAM659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 59,
+          "comparable_cell_count": 59,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-11-01",
+          "observation_count": 131,
+          "retrieved_at_utc": "2026-09-06T06:35:33.295903Z",
+          "series_id": "CPGRLE01CHM659N",
+          "source_sha256": "1a2cd0e344552111e025ad4194f0c32e27dadf73653716c687ec6dccbedbd3ce",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPGRLE01CHM659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 0,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-10-01",
+          "observation_count": 130,
+          "retrieved_at_utc": "2026-09-06T06:35:33.743960Z",
+          "series_id": "CPGRLE01GBM659N",
+          "source_sha256": "0982bb46f8a6e10fe0d0248c2a82b1b436bc0aeb3930185850b33bbe660a1edc",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPGRLE01GBM659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "content_type": "text/html",
+          "last_selectable_vintage": "2024-05-15",
+          "reason": "ALFRED payload is not a valid ZIP",
+          "retrieved_at_utc": "2026-09-06T06:40:34.790217Z",
+          "series_id": "CPGRLE01JPM659N",
+          "source_sha256": "0ee25369343e837a3514bdb3a3309621d7c0441b923a0d2067f87f7f24d26e0f",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPGRLE01JPM659N",
+          "status": "FAIL_REQUEST_RETURNED_HTML"
+        },
+        {
+          "changed_cell_count": 58,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-11-01",
+          "observation_count": 131,
+          "retrieved_at_utc": "2026-09-06T06:35:34.836916Z",
+          "series_id": "CPGRLE01NOM659N",
+          "source_sha256": "e7fe67a671a773b84f17b38015e9b1264c72bf30e56ba17398b91816eb341a01",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPGRLE01NOM659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 19,
+          "comparable_cell_count": 19,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-07-01",
+          "observation_count": 43,
+          "retrieved_at_utc": "2026-09-06T06:35:35.331189Z",
+          "series_id": "CPGRLE01NZQ659N",
+          "source_sha256": "c7d7a831e890223f37f18e85a573ad01faf4118d935f106150fda22d61790e2d",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPGRLE01NZQ659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 58,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-11-01",
+          "observation_count": 131,
+          "retrieved_at_utc": "2026-09-06T06:35:35.807559Z",
+          "series_id": "CPGRLE01SEM659N",
+          "source_sha256": "eb5f6a8c63f885d8e34d14c20f3212a65486543d2ba53eb83e715997fd4c28f8",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPGRLE01SEM659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 58,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-11-01",
+          "observation_count": 131,
+          "retrieved_at_utc": "2026-09-06T06:35:36.387121Z",
+          "series_id": "CPGRLE01USM659N",
+          "source_sha256": "82fb909300945d1818226fdb8b78d76e46d663ef784d8c3507bf6c64a5f24a97",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPGRLE01USM659N",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "content_type": "text/html",
+          "last_selectable_vintage": "2023-03-09",
+          "reason": "ALFRED payload is not a valid ZIP",
+          "retrieved_at_utc": "2026-09-06T06:40:37.348519Z",
+          "series_id": "CPHPTT01EZM659N",
+          "source_sha256": "b835515b7b3b3518ef1b8379174477a6199dce8ac5b6e805a1ef63e0870825dd",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPHPTT01EZM659N",
+          "status": "FAIL_REQUEST_RETURNED_HTML"
+        },
+        {
+          "content_type": "text/html",
+          "last_selectable_vintage": "2025-11-17",
+          "reason": "ALFRED payload is not a valid ZIP",
+          "retrieved_at_utc": "2026-09-06T06:40:39.941881Z",
+          "series_id": "LMUNRRTTCHM156S",
+          "source_sha256": "da11715aac5f8c71008d131c0a48fd61b68d2802460a24fe4c088b15d6bcfa1a",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=LMUNRRTTCHM156S",
+          "status": "FAIL_REQUEST_RETURNED_HTML"
+        },
+        {
+          "changed_cell_count": 58,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-10-01",
+          "observation_count": 130,
+          "retrieved_at_utc": "2026-09-06T06:35:38.075716Z",
+          "series_id": "LRHUTTTTAUM156S",
+          "source_sha256": "c1f13a66b4b513b76227538d5d634ef0e4feb0c5a40d389517cd8b06a1bacc81",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=LRHUTTTTAUM156S",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 35,
+          "comparable_cell_count": 59,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-11-01",
+          "observation_count": 131,
+          "retrieved_at_utc": "2026-09-06T06:35:38.542082Z",
+          "series_id": "LRHUTTTTCAM156S",
+          "source_sha256": "cb4521aa6c6c9b3f890586942386f89da44b0c09e4378f8b5fdfdcdd997cebf4",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=LRHUTTTTCAM156S",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "content_type": "text/html",
+          "last_selectable_vintage": "2023-03-09",
+          "reason": "ALFRED payload is not a valid ZIP",
+          "retrieved_at_utc": "2026-09-06T06:40:42.503254Z",
+          "series_id": "LRHUTTTTEZM156S",
+          "source_sha256": "f2a3b6f6963ec74b15d8fcc5bbbc0817b42a0158c5223d8049ff917dbcc954ac",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=LRHUTTTTEZM156S",
+          "status": "FAIL_REQUEST_RETURNED_HTML"
+        },
+        {
+          "changed_cell_count": 48,
+          "comparable_cell_count": 56,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-08-01",
+          "observation_count": 128,
+          "retrieved_at_utc": "2026-09-06T06:35:39.620809Z",
+          "series_id": "LRHUTTTTGBM156S",
+          "source_sha256": "780ca14017cafcf47e0fa8d3d8a23c98c6d8391132eaba8af35ec9be10a1d54e",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=LRHUTTTTGBM156S",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 7,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-10-01",
+          "observation_count": 130,
+          "retrieved_at_utc": "2026-09-06T06:35:40.375695Z",
+          "series_id": "LRHUTTTTJPM156S",
+          "source_sha256": "4c813eb945aa5d8846b101961384e590c69671894e22c852fe39adb6152cf350",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=LRHUTTTTJPM156S",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 48,
+          "comparable_cell_count": 57,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-10-01",
+          "observation_count": 130,
+          "retrieved_at_utc": "2026-09-06T06:35:40.838299Z",
+          "series_id": "LRHUTTTTNOM156S",
+          "source_sha256": "c3ec66277511e75758b5c83667e1aa08fe8c696d130911cd6c80ecdbb7050447",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=LRHUTTTTNOM156S",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 8,
+          "comparable_cell_count": 19,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-07-01",
+          "observation_count": 43,
+          "retrieved_at_utc": "2026-09-06T06:35:41.354644Z",
+          "series_id": "LRHUTTTTNZQ156S",
+          "source_sha256": "c39c6bcf1a0b959510d729a4987da240c772ff1a89d5c49a99b1e9bfac296ae3",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=LRHUTTTTNZQ156S",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 56,
+          "comparable_cell_count": 58,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-10-01",
+          "observation_count": 130,
+          "retrieved_at_utc": "2026-09-06T06:35:41.789489Z",
+          "series_id": "LRHUTTTTSEM156S",
+          "source_sha256": "4d00e19901e13db48bea5eb96de50bf9a8e00e78b8853cf029f66a93b62b24aa",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=LRHUTTTTSEM156S",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        },
+        {
+          "changed_cell_count": 24,
+          "comparable_cell_count": 59,
+          "content_type": "application/zip",
+          "first_observation": "2014-01-01",
+          "last_observation": "2024-11-01",
+          "observation_count": 131,
+          "retrieved_at_utc": "2026-09-06T06:35:42.436460Z",
+          "series_id": "LRHUTTTTUSM156S",
+          "source_sha256": "9e5786fc580991aa854f88cad8d7f3f8558882fce01e13e18452af41ac8e7cbd",
+          "source_url": "https://alfred.stlouisfed.org/series/downloaddata?seid=LRHUTTTTUSM156S",
+          "status": "PASS_FOR_REQUESTED_VINTAGES",
+          "vintage_dates": [
+            "2018-12-31",
+            "2024-12-31"
+          ]
+        }
+      ],
+      "series_count": 30,
+      "series_fail_count": 6,
+      "series_pass_count": 24,
+      "status": "REVIEW_REQUIRED"
+    },
+    "bis_policy_rate": {
+      "compilation": {
+        "AUD": "From 2 Aug 1990 onwards: cash rate target; from 23 Jan 1990 to 1 Aug 1990: middle of the cash rate target range; from 7 Apr 1976 to 22 Jan 1990: interbank overnight cash rate.",
+        "CAD": "From 1 Jun 1994 onwards: Central Bank target, overnight rate; from 27 Jul 1960 to 31 May 1994: official bank rate.",
+        "CHF": "From 13 June 2019 onwards SNB Policy rate; From 1 Jan 2000 to 12 June 2019 mid-point of the SNB target range; from 1 Jan 1946 to 31 Dec 1999: discount rate.",
+        "EUR": "From 18 Sep 2024 onwards: official central bank steering rate is the deposit facility rate, fixed rate; from 15 Oct 2008 to 17 Sep 2024: official central bank liquidity providing, main refinancing operations, fixed rate; from 28 Jun 2000 to 14 Oct 2008: official central bank liquidity providing, main refinancing operations, minimum bid rate; from 5 Jan 1999 to 27 Jun 2000: official central bank liquidity providing, main refinancing operations, fixed rate.",
+        "GBP": "From 3 Aug 2006 onwards: official bank rate; from 6 May 1997 to 2 Aug 2006: repo rate; from 20 Aug 1981 to 5 May 1997: minimum Bank of England Band 1 dealing rate; from 16 Oct 1972 to 19 Aug 1981: minimum lending rate; from 1 Jan 1946 to 15 Oct 1972: bank rate.",
+        "JPY": "From 17 Jun 2026 onwards: the BOJ encourages the uncollateralized overnight call rate to remain at around 1.00 percent; From 22 Dec 2025 to 16 Jun 2026: the BOJ encourages the uncollateralized overnight call rate to remain at around 0.75 percent; From 27 Jan 2025 to 21 Dec 2025: the BOJ encourages the uncollateralized overnight call rate to remain at around 0.50 percent; From 1 Aug 2024 to 26 Jan 2025: the BOJ encouraged the UOCR to remain at around 0.25% ; From 21 Mar 2024 to 31 July: the BOJ encouraged the UOCR to remain at around 0 to 0.1 %; from 21 Sep 2016 to 20 Mar 2024: the BOJ set the guideline for market operations which specifies a short-term policy interest rate at minus 0.1% and a target level of 10-year JGB yields at around 0%. Short-term policy interest rate; from 4 Apr 2013 to 20 Sep 2016: no policy rate; from 5 Oct 2010 to 3 Apr 2013: the BOJ encouraged the UOCR to remain at around 0 to 0.1%; from 19 Dec 2008 to 4 Oct 2010: the BOJ encouraged the UOCR to remain at around 0. %; from 31 Oct 2008 to 18 Dec 2008: the BOJ encouraged the UOCR to remain at around 0.3%; before 30 Oct 2008, refer to https://data.bis.org/topics/CBPOL",
+        "NOK": "From 11 Jun 1993 onwards: official deposit facility rate; from 3 Mar 1986 to 10 Jun 1993 official credit facility rate.",
+        "NZD": "From 17 Mar 1999 onwards: Official market intervention representative rate, official cash rate; from Jan 1985 to 16 Mar 1999: overnight cash rate.",
+        "SEK": "From 1 Jun 1994 onwards: Central Bank fixed repo/reversed repo rate; from 30 Jan 1987 to 31 May 1994: marginal rate; from 1 Jan 1946 to 29 Jan 1987: discount rate. ",
+        "USD": "From 19 Dec 1985 onwards: mid-point of the Federal Reserve target rate; from 1 Jul 1954 to 18 Dec 1985: US Fed Funds effective rate."
+      },
+      "content_type": "text/csv",
+      "currencies": [
+        "AUD",
+        "CAD",
+        "CHF",
+        "EUR",
+        "GBP",
+        "JPY",
+        "NOK",
+        "NZD",
+        "SEK",
+        "USD"
+      ],
+      "latest": {
+        "AUD": {
+          "date": "2024-12-31",
+          "rate_percent": 4.35
+        },
+        "CAD": {
+          "date": "2024-12-31",
+          "rate_percent": 3.25
+        },
+        "CHF": {
+          "date": "2024-12-31",
+          "rate_percent": 0.5
+        },
+        "EUR": {
+          "date": "2024-12-31",
+          "rate_percent": 3.0
+        },
+        "GBP": {
+          "date": "2024-12-31",
+          "rate_percent": 4.75
+        },
+        "JPY": {
+          "date": "2024-12-31",
+          "rate_percent": 0.25
+        },
+        "NOK": {
+          "date": "2024-12-31",
+          "rate_percent": 4.5
+        },
+        "NZD": {
+          "date": "2024-12-31",
+          "rate_percent": 4.25
+        },
+        "SEK": {
+          "date": "2024-12-30",
+          "rate_percent": 2.75
+        },
+        "USD": {
+          "date": "2024-12-31",
+          "rate_percent": 4.375
+        }
+      },
+      "limitation": "Effective-rate series; exact decision announcement timestamps and historical corridor conventions still require bank profiles.",
+      "retrieved_at_utc": "2026-09-06T06:24:18.365229Z",
+      "source_sha256": "f785f3e8fb4a2c83190629aa4cda823cbceda08bd040ab5c34f5770371ccd3ef",
+      "source_url": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/.?startPeriod=2024-12-01&endPeriod=2024-12-31",
+      "status": "PASS_FOR_SCALAR_HISTORY"
+    },
+    "ecb_fx": {
+      "common_date_count": 20,
+      "content_type": "text/csv",
+      "cross_example": {
+        "date": "2024-12-31",
+        "formula": "JPY_per_EUR / USD_per_EUR",
+        "pair": "USDJPY",
+        "rate": 156.9544710751757
+      },
+      "currencies": [
+        "AUD",
+        "CAD",
+        "CHF",
+        "GBP",
+        "JPY",
+        "NOK",
+        "NZD",
+        "SEK",
+        "USD"
+      ],
+      "limitation": "Indicative ECB reference marks, not executable quotes.",
+      "retrieved_at_utc": "2026-09-06T06:19:49.555844Z",
+      "rows_per_currency": {
+        "AUD": 20,
+        "CAD": 20,
+        "CHF": 20,
+        "GBP": 20,
+        "JPY": 20,
+        "NOK": 20,
+        "NZD": 20,
+        "SEK": 20,
+        "USD": 20
+      },
+      "source_sha256": "336e5cf3e885e2c24daeddfed173580448097c864c41a88d2b1eb217398ee883",
+      "source_url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+JPY+GBP+CHF+CAD+AUD+NZD+NOK+SEK.EUR.SP00.A?startPeriod=2024-12-01&endPeriod=2024-12-31&format=csvdata",
+      "status": "PASS"
+    },
+    "eiopa_rfr_proxy": {
+      "limitation": "Annual zero-coupon risk-free curve with minimum one-year tenor; not a six-month OIS-implied policy path.",
+      "samples": [
+        {
+          "content_type": "application/zip",
+          "currencies": [
+            "AUD",
+            "CAD",
+            "CHF",
+            "EUR",
+            "GBP",
+            "JPY",
+            "NOK",
+            "NZD",
+            "SEK",
+            "USD"
+          ],
+          "maturity_years": 1,
+          "path_name": "2018-12.zip",
+          "rates_percent": {
+            "AUD": 1.83,
+            "CAD": 2.0820000000000003,
+            "CHF": -0.745,
+            "EUR": -0.333,
+            "GBP": 0.9809999999999999,
+            "JPY": -0.091,
+            "NOK": 1.247,
+            "NZD": 1.8259999999999998,
+            "SEK": -0.178,
+            "USD": 2.593
+          },
+          "reference_date": "2018-12-31",
+          "retrieved_at_utc": "2026-09-06T06:14:53.008470Z",
+          "source_instrument_by_currency": {
+            "AUD": "SWP",
+            "CAD": "SWP",
+            "CHF": "SWP",
+            "EUR": "SWP",
+            "GBP": "SWP",
+            "JPY": "SWP",
+            "NOK": "SWP",
+            "NZD": "SWP",
+            "SEK": "SWP",
+            "USD": "SWP"
+          },
+          "source_instruments": [
+            "SWP"
+          ],
+          "source_page_url": "https://www.eiopa.europa.eu/tools-and-data/risk-free-interest-rate-term-structures/risk-free-rate-previous-releases-and-preparatory-phase_en",
+          "source_sha256": "95bd3655a67bcdec60d6ed8ee862cb67877d2d6eea223d87d740e2f49ae0ea8e",
+          "source_url": "https://www.eiopa.europa.eu/document/download/5e47b36b-f322-4239-a680-ef5a0a8cc745_en?filename=December+2018.zip"
+        },
+        {
+          "content_type": "application/zip",
+          "currencies": [
+            "AUD",
+            "CAD",
+            "CHF",
+            "EUR",
+            "GBP",
+            "JPY",
+            "NOK",
+            "NZD",
+            "SEK",
+            "USD"
+          ],
+          "maturity_years": 1,
+          "path_name": "2024-12.zip",
+          "rates_percent": {
+            "AUD": 4.152,
+            "CAD": 2.881,
+            "CHF": 0.05,
+            "EUR": 2.236,
+            "GBP": 4.457,
+            "JPY": 0.516,
+            "NOK": 4.299,
+            "NZD": 3.499,
+            "SEK": 2.247,
+            "USD": 4.18
+          },
+          "reference_date": "2024-12-31",
+          "retrieved_at_utc": "2026-09-06T06:14:56.907588Z",
+          "source_instrument_by_currency": {
+            "AUD": "SWP",
+            "CAD": "OIS",
+            "CHF": "OIS",
+            "EUR": "SWP",
+            "GBP": "OIS",
+            "JPY": "OIS",
+            "NOK": "SWP",
+            "NZD": "SWP",
+            "SEK": "SWP",
+            "USD": "OIS"
+          },
+          "source_instruments": [
+            "OIS",
+            "SWP"
+          ],
+          "source_page_url": "https://www.eiopa.europa.eu/tools-and-data/risk-free-interest-rate-term-structures/risk-free-rate-previous-releases-and-preparatory-phase_en",
+          "source_sha256": "e154a2a73d5dd22e226748ac0a85840b46885d16dedf27560f9009df7fc4690f",
+          "source_url": "https://www.eiopa.europa.eu/document/download/946ea3f4-881b-405b-ae54-e1b930901527_en?filename=EIOPA_RFR_20241231.zip"
+        }
+      ],
+      "status": "PASS_AS_SECONDARY_1Y_PROXY_ONLY"
+    }
+  },
+  "primary_expectation_gate": {
+    "reason": "No free, point-in-time, six-month Tier A policy-expectation history has been qualified for every G10 currency.",
+    "status": "FAIL"
+  }
+}
