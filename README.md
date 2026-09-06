@@ -18,8 +18,10 @@ point-in-time G10 panel and is `REVIEW_REQUIRED`: 232/240 evaluation rows are
 complete, with eight retired-series gaps failed closed. Phase 03 is also
 `REVIEW_REQUIRED`: the structural-policy diagnostic is promising, but the
 registered repricing test is under-sampled and its low-history diagnostic fails
-to beat no change. No strategy or profitability claim exists, and 2025 onward
-remains sealed.
+to beat no change. Phase 04 registered FX hypotheses are therefore `NOT_TESTED`;
+its non-gating low-history diagnostics have negative point estimates and wide
+intervals. No strategy or profitability claim exists, and 2025 onward remains
+sealed.
 
 ## Research architecture
 
@@ -51,7 +53,7 @@ retained only as frozen benchmarks.
 | 01 | free G10 data-source qualification | POC complete - `REVIEW_REQUIRED` |
 | 02 | canonical point-in-time macro/policy/proxy panel | Complete - `REVIEW_REQUIRED` (232/240 evaluation rows) |
 | 03 | structural reaction and expected-repricing models | Complete - hypotheses `NOT_TESTED`; diagnostics retained |
-| 04 | G10 currency and pair-divergence research | Gated by Phase 03 |
+| 04 | G10 currency and pair-divergence research | Complete - registered tests `NOT_TESTED`; exploratory signs negative |
 | 05 | aggregate Fundamental Bias research gate | Gated by Phase 04 |
 | 06+ | technical timing and execution research | Only after Phase 05 proceeds |
 
@@ -66,6 +68,7 @@ retained only as frozen benchmarks.
 - [Phase 01 readable source result](docs/PHASE_01_SOURCE_QUALIFICATION.md)
 - [Phase 02 canonical-panel result](docs/PHASE_02_CANONICAL_PANEL.md)
 - [Phase 03 model result](docs/PHASE_03_POLICY_PROXY_MODELS.md)
+- [Phase 04 currency-divergence result](docs/PHASE_04_CURRENCY_DIVERGENCE.md)
 - [Machine-readable Phase 01 POC evidence](evidence/phase01/poc_evidence.json)
 - [Complete 70-row source matrix](evidence/phase01/source_matrix.csv)
 
