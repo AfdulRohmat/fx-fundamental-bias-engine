@@ -1,0 +1,29 @@
+{
+  "FB_H1_POLICY_SKILL_P1Y": "NOT_TESTED",
+  "FB_H2_PROXY_REPRICING_SKILL_P1Y": "NOT_TESTED",
+  "fx_outcomes_accessed": false,
+  "h1_diagnostic": {
+    "mae_equal_weight_bp": 96.31699910986372,
+    "mae_model_bp": 74.52610013720314,
+    "mae_no_change_bp": 107.08791208791209,
+    "month_count": 19,
+    "model_vs_equal_weight_95_ci_bp": [7.016160889317087, 38.09204692619806],
+    "model_vs_no_change_95_ci_bp": [10.985787126243679, 55.51456331335781],
+    "row_count": 182,
+    "supported_if_quality_had_passed": true
+  },
+  "h2_low_history_exploratory": {
+    "mae_model_bp": 19.587298718504908,
+    "mae_momentum_bp": 27.508018867924527,
+    "mae_no_change_bp": 18.641509433962263,
+    "model_vs_momentum_95_ci_bp": [2.179459992020746, 13.709535826789406],
+    "model_vs_no_change_95_ci_bp": [-2.733734958238474, 0.8548734267491418],
+    "month_count": 22,
+    "row_count": 212,
+    "supported": false
+  },
+  "panel_quality_pass": false,
+  "phase": "03-policy-proxy-models",
+  "sealed_data_accessed": false,
+  "status": "REVIEW_REQUIRED"
+}
