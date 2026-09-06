@@ -12,7 +12,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from .artifacts import sha256_path, write_json, write_manifest
+from .artifacts import sha256_path, write_json, write_jsonl, write_manifest
 from .research_config import ResearchConfig
 from .time_utils import add_months, month_ends
 
@@ -384,8 +384,8 @@ def build_phase04(
             "full_g10_months": len(monthly),
         },
     )
-    write_json(output_dir / "issues.jsonl", [])
-    write_json(output_dir / "config_snapshot.json", asdict(config))
+    write_jsonl(output_dir / "issues.jsonl", [])
+    write_json(output_dir / "config_snapshot.yaml", asdict(config))
     write_json(
         output_dir / "source_manifest.json",
         {

@@ -35,6 +35,19 @@ def write_json(path: Path, value: Any) -> None:
     )
 
 
+def write_jsonl(path: Path, values: list[Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    lines = [
+        json.dumps(value, sort_keys=True, allow_nan=False)
+        for value in values
+    ]
+    path.write_text(
+        "" if not lines else "\n".join(lines) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+
+
 def write_manifest(directory: Path, *, phase: str) -> dict[str, Any]:
     files = []
     for path in sorted(directory.rglob("*")):

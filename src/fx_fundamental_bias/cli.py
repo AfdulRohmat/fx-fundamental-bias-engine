@@ -10,6 +10,7 @@ from .phase02_fetch import fetch_phase02
 from .phase02_panel import build_phase02
 from .phase03_models import build_phase03
 from .phase04_fx import build_phase04
+from .phase05_gate import build_phase05
 from .qualification import load_catalog, summarize, write_matrix, write_summary
 from .research_config import load_research_config
 from .source_poc import build_phase01_evidence, write_json
@@ -51,6 +52,13 @@ def _parser() -> argparse.ArgumentParser:
     fx.add_argument("--predictions", type=Path, required=True)
     fx.add_argument("--ecb", type=Path, required=True)
     fx.add_argument("--output", type=Path, required=True)
+
+    gate = commands.add_parser("phase05-build")
+    gate.add_argument("--config", type=Path, required=True)
+    gate.add_argument("--phase02", type=Path, required=True)
+    gate.add_argument("--phase03", type=Path, required=True)
+    gate.add_argument("--phase04", type=Path, required=True)
+    gate.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -111,6 +119,20 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(
             f"status={result['status']} "
             f"g10_months={result['low_history_exploratory']['full_g10_month_count']}"
+        )
+        return 0
+    if arguments.command == "phase05-build":
+        config = load_research_config(arguments.config)
+        result = build_phase05(
+            config,
+            arguments.phase02,
+            arguments.phase03,
+            arguments.phase04,
+            arguments.output,
+        )
+        print(
+            f"decision={result['decision']} "
+            f"gates={result['passed_gate_count']}/{result['gate_count']}"
         )
         return 0
     raise AssertionError(f"Unhandled command: {arguments.command}")
