@@ -206,6 +206,8 @@ def _build_row(
     policy_3m_ago = policies.get((spec.ref_area, add_months(snapshot, -3)))
     eligible_curve_period = add_months(snapshot, -1)
     curve = curves.get((spec.currency, eligible_curve_period))
+    next_policy = policies.get((spec.ref_area, add_months(snapshot, 1)))
+    next_curve = curves.get((spec.currency, snapshot))
     row: dict[str, Any] = {
         "snapshot": snapshot.isoformat(),
         "currency": spec.currency,
@@ -225,6 +227,16 @@ def _build_row(
         if curve is None or policy is None
         else 100.0 * (curve[0] - policy),
     }
+    next_proxy_path = (
+        None
+        if next_curve is None or next_policy is None
+        else 100.0 * (next_curve[0] - next_policy)
+    )
+    row["proxy_repricing_1m_bp"] = (
+        None
+        if row["proxy_path_1y_bp"] is None or next_proxy_path is None
+        else next_proxy_path - row["proxy_path_1y_bp"]
+    )
     for name, feature in features.items():
         row[f"{name}_raw"] = feature.raw
         row[f"{name}_z"] = feature.z

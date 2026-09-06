@@ -8,6 +8,7 @@ from pathlib import Path
 
 from .phase02_fetch import fetch_phase02
 from .phase02_panel import build_phase02
+from .phase03_models import build_phase03
 from .qualification import load_catalog, summarize, write_matrix, write_summary
 from .research_config import load_research_config
 from .source_poc import build_phase01_evidence, write_json
@@ -37,6 +38,12 @@ def _parser() -> argparse.ArgumentParser:
     panel.add_argument("--config", type=Path, required=True)
     panel.add_argument("--raw-root", type=Path, required=True)
     panel.add_argument("--output", type=Path, required=True)
+
+    models = commands.add_parser("phase03-build")
+    models.add_argument("--config", type=Path, required=True)
+    models.add_argument("--panel", type=Path, required=True)
+    models.add_argument("--phase02-summary", type=Path, required=True)
+    models.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -73,6 +80,20 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(
             f"status={result['status']} rows={result['row_count']} "
             f"complete={result['complete_row_count']}"
+        )
+        return 0
+    if arguments.command == "phase03-build":
+        config = load_research_config(arguments.config)
+        result = build_phase03(
+            config,
+            arguments.panel,
+            arguments.phase02_summary,
+            arguments.output,
+        )
+        print(
+            f"status={result['status']} "
+            f"h1={result['FB_H1_POLICY_SKILL_P1Y']} "
+            f"h2={result['FB_H2_PROXY_REPRICING_SKILL_P1Y']}"
         )
         return 0
     raise AssertionError(f"Unhandled command: {arguments.command}")
