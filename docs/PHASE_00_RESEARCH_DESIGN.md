@@ -1,6 +1,6 @@
 ﻿# Phase 00 - Research Design
 
-Status: prepared for review; no empirical model result
+Status: accepted design baseline; no empirical model result
 
 ## Outcome
 

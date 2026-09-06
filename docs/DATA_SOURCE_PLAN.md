@@ -1,6 +1,29 @@
 ﻿# Free Data Source Plan
 
-Status: Phase 00 candidates; no source is primary until Phase 01 passes its POC
+Status: Phase 01 POC complete; primary stack remains `REVIEW_REQUIRED`
+
+## Phase 01 source-gate result
+
+The network POC and network-free replay produced 70 mandatory
+currency-feature rows:
+
+| Decision | Rows | Meaning |
+|---|---:|---|
+| `PASS` | 10 | ECB reference-rate leg/identity for each G10 currency |
+| `FAIL` | 10 | no qualified free six-month Tier A expectation series |
+| `REVIEW_REQUIRED` | 50 | macro, policy-rate, and profile work remains |
+
+EIOPA archives qualify only as a secondary one-year RFR proxy. They do not
+satisfy the registered six-month expectation field: the minimum tenor is one
+year, publication can lag the curve date, and the observed instrument mapping
+changes across currencies and time (`SWP` for all sampled 2018 curves; mixed
+`OIS`/`SWP` in 2024).
+
+ALFRED returned valid two-vintage ZIPs for 24 of 30 candidate macro series under
+the common POC request. Six returned an HTML form instead of a ZIP and remain
+unqualified under that request. Even the 24 successful candidates still need
+exact release-time and central-bank-measure profile work; a successful download
+alone is not a source `PASS`.
 
 ## Source principles
 
