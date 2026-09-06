@@ -1,6 +1,6 @@
 ﻿# Technical Plan and Contract - Phase 00 through Phase 05
 
-Status: Phase 00 baseline frozen; Phase 01 source decision pending
+Status: Phase 05 complete; P1Y proxy decision `DO_NOT_PROCEED`
 PRD: `FUNDAMENTAL_BIAS_ENGINE_PRD.md` v0.1
 
 Amendment 001 registers a separate free-data proxy namespace without altering

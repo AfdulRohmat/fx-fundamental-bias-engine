@@ -20,7 +20,10 @@ complete, with eight retired-series gaps failed closed. Phase 03 is also
 registered repricing test is under-sampled and its low-history diagnostic fails
 to beat no change. Phase 04 registered FX hypotheses are therefore `NOT_TESTED`;
 its non-gating low-history diagnostics have negative point estimates and wide
-intervals. No strategy or profitability claim exists, and 2025 onward remains
+intervals. Phase 05 concludes `DO_NOT_PROCEED_WITH_P1Y_PROXY_SPECIFICATION`
+after only 2/8 mandatory gates pass. This blocks technical timing for the proxy
+specification; it does not reject the still-untested Tier A six-month
+hypothesis. No strategy or profitability claim exists, and 2025 onward remains
 sealed.
 
 ## Research architecture
@@ -54,7 +57,7 @@ retained only as frozen benchmarks.
 | 02 | canonical point-in-time macro/policy/proxy panel | Complete - `REVIEW_REQUIRED` (232/240 evaluation rows) |
 | 03 | structural reaction and expected-repricing models | Complete - hypotheses `NOT_TESTED`; diagnostics retained |
 | 04 | G10 currency and pair-divergence research | Complete - registered tests `NOT_TESTED`; exploratory signs negative |
-| 05 | aggregate Fundamental Bias research gate | Gated by Phase 04 |
+| 05 | aggregate Fundamental Bias research gate | Complete - `DO_NOT_PROCEED_WITH_P1Y_PROXY_SPECIFICATION` (2/8 gates) |
 | 06+ | technical timing and execution research | Only after Phase 05 proceeds |
 
 ## Documentation
@@ -69,6 +72,7 @@ retained only as frozen benchmarks.
 - [Phase 02 canonical-panel result](docs/PHASE_02_CANONICAL_PANEL.md)
 - [Phase 03 model result](docs/PHASE_03_POLICY_PROXY_MODELS.md)
 - [Phase 04 currency-divergence result](docs/PHASE_04_CURRENCY_DIVERGENCE.md)
+- [Phase 05 final research gate](docs/PHASE_05_RESEARCH_GATE.md)
 - [Machine-readable Phase 01 POC evidence](evidence/phase01/poc_evidence.json)
 - [Complete 70-row source matrix](evidence/phase01/source_matrix.csv)
 
@@ -88,6 +92,21 @@ The parsers fail closed on missing G10 curves, malformed vintage columns,
 non-finite values, unexpected FX orientation, duplicate rows, and incomplete
 source matrices. Raw provider files remain untracked; committed evidence stores
 their SHA-256 hashes and derived audit facts.
+
+## Reproduce Phases 02-05
+
+After `phase02-fetch` has cached the official payloads, run each phase into a
+new immutable output directory:
+
+```powershell
+.\.venv\Scripts\fbias.exe phase02-build --config config\research_proxy_v0_2.json --raw-root data\raw\phase02 --output artifacts\phase02\replay
+.\.venv\Scripts\fbias.exe phase03-build --config config\research_proxy_v0_2.json --panel artifacts\phase02\replay\panel.csv --phase02-summary artifacts\phase02\replay\summary.json --output artifacts\phase03\replay
+.\.venv\Scripts\fbias.exe phase04-build --config config\research_proxy_v0_2.json --predictions artifacts\phase03\replay\predictions.csv --ecb data\raw\phase02\ecb\fx_reference_daily.csv --output artifacts\phase04\replay
+.\.venv\Scripts\fbias.exe phase05-build --config config\research_proxy_v0_2.json --phase02 artifacts\phase02\replay\summary.json --phase03 artifacts\phase03\replay\summary.json --phase04 artifacts\phase04\replay\summary.json --output artifacts\phase05\replay
+```
+
+The raw payloads and full run bundles are intentionally ignored. Compact
+machine-readable results for every phase are committed under `evidence/`.
 
 ## Research safeguards
 

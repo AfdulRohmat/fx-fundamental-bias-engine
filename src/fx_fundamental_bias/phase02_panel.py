@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any
 
 from .alfred import VintageTable, load_series
-from .artifacts import sha256_path, write_json, write_manifest
+from .artifacts import sha256_path, write_json, write_jsonl, write_manifest
 from .eiopa_rfr import parse_term_structures
 from .research_config import CurrencySpec, ResearchConfig
 from .time_utils import add_months, month_end, month_ends
@@ -342,8 +342,8 @@ def build_phase02(
     }
     write_json(output_dir / "sample_flow.json", summary)
     write_json(output_dir / "summary.json", summary)
-    write_json(output_dir / "issues.jsonl", [])
-    write_json(output_dir / "config_snapshot.json", asdict(config))
+    write_jsonl(output_dir / "issues.jsonl", [])
+    write_json(output_dir / "config_snapshot.yaml", asdict(config))
     report = (
         "# Phase 02 - Canonical panel\n\n"
         f"Status: `{summary['status']}`\n\n"

@@ -12,7 +12,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from .artifacts import sha256_path, write_json, write_manifest
+from .artifacts import sha256_path, write_json, write_jsonl, write_manifest
 from .research_config import ResearchConfig
 from .ridge import predict, ridge_fit
 from .time_utils import add_months
@@ -521,8 +521,8 @@ def build_phase03(
     )
     write_json(output_dir / "summary.json", summary)
     write_json(output_dir / "sample_flow.json", {"panel_rows": len(rows)})
-    write_json(output_dir / "issues.jsonl", [])
-    write_json(output_dir / "config_snapshot.json", asdict(config))
+    write_jsonl(output_dir / "issues.jsonl", [])
+    write_json(output_dir / "config_snapshot.yaml", asdict(config))
     write_json(
         output_dir / "source_manifest.json",
         {"panel_sha256": sha256_path(panel_path), "fx_outcomes_accessed": False},

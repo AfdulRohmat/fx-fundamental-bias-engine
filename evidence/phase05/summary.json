@@ -1,0 +1,20 @@
+{
+  "decision": "DO_NOT_PROCEED_WITH_P1Y_PROXY_SPECIFICATION",
+  "failed_gates": [
+    "point_in_time_and_provenance",
+    "full_g10_evaluation_coverage",
+    "FB_H1_POLICY_SKILL_P1Y",
+    "FB_H2_PROXY_REPRICING_SKILL_P1Y",
+    "at_least_two_fx_tests_including_H3_or_H4",
+    "FB_H6_STABILITY_P1Y"
+  ],
+  "gate_count": 8,
+  "original_tier_a_six_month_specification": "NOT_TESTED",
+  "passed_gate_count": 2,
+  "passed_gates": [
+    "non_executable_fx_and_no_profitability_claim",
+    "sealed_2025_plus"
+  ],
+  "phase": "05-research-gate",
+  "sealed_data_accessed": false
+}
