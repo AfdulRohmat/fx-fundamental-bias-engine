@@ -1,0 +1,23 @@
+{
+  "FB_H3_PAIR_DIRECTION_P1Y": "NOT_TESTED",
+  "FB_H4_RANK_IC_P1Y": "NOT_TESTED",
+  "FB_H5_EXTREME_SPREAD_P1Y": "NOT_TESTED",
+  "FB_H6_STABILITY_P1Y": "NOT_TESTED",
+  "fx_marks_non_executable": true,
+  "low_history_exploratory": {
+    "all_expected_signs_stable": false,
+    "full_g10_month_count": 16,
+    "mean_extreme_spread_95_ci_bp": [-158.1237539923536, 56.59772657489991],
+    "mean_extreme_spread_bp": -41.55672759601654,
+    "mean_rank_ic": -0.10454545454545454,
+    "mean_rank_ic_95_ci": [-0.24772727272727274, 0.05],
+    "pair_month_count": 22,
+    "pair_row_count": 920,
+    "pair_slope_95_ci": [-0.0005858610151437745, 0.00010528815422858047],
+    "pair_slope_log_return_per_bp": -0.00021882510974078703
+  },
+  "phase": "04-currency-divergence",
+  "profitability_claim": false,
+  "sealed_data_accessed": false,
+  "status": "NOT_TESTED"
+}
